@@ -257,7 +257,7 @@ download_sing-box() {
         SING_BOX_VERSION=$1
         local SING_BOX_VERSION_TEMP="v${SING_BOX_VERSION}"
     else
-        local SING_BOX_VERSION_TEMP=$(curl -Ls "https://api.github.com/repos/SagerNet/sing-box/releases/" | jq -r '.[]|select (.prerelease==true)|.tag_name' | grep '"tag_name":' | head -1)
+        local SING_BOX_VERSION_TEMP=$(curl -Ls "https://api.github.com/repos/SagerNet/sing-box/releases" | jq -r '.[]|select (.prerelease==true)|.tag_name' | grep '"tag_name":' | head -1)
         SING_BOX_VERSION=${SING_BOX_VERSION_TEMP:1}
     fi
     LOGI "将选择使用版本:${SING_BOX_VERSION}"
@@ -283,7 +283,7 @@ download_config() {
         mkdir -p ${CONFIG_FILE_PATH}
     fi
     if [[ ! -f "${CONFIG_FILE_PATH}/config.json" ]]; then
-        wget --no-check-certificate -O ${CONFIG_FILE_PATH}/config.json https://raw.githubusercontent.com/FranzKafkaYu/sing-box-yes/main/shadowsocks2022/server_config.json
+        wget --no-check-certificate -O ${CONFIG_FILE_PATH}/config.json https://raw.githubusercontent.com/zswdcx/sing-box-yes/main/shadowsocks2022/server_config.json
         if [[ $? -ne 0 ]]; then
             LOGE "下载sing-box配置模板失败,请检查网络"
             exit 1
