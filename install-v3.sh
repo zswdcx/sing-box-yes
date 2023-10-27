@@ -397,7 +397,6 @@ uninstall_sing-box() {
         stop_sing-box
     fi
     clear_sing_box
-
     if [ $? -ne 0 ]; then
         LOGE "卸载sing-box失败,请检查日志"
         exit 1
