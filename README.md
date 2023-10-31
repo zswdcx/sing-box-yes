@@ -34,7 +34,7 @@ sing-box是一个新的通用代理平台,对标*ray core与clash,且具有许�
 针对sing-box的更多内容,请点击这里:point_right:[official site](https://sing-box.sagernet.org/)
 # 一键安装  
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/sing-box-yes/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/zswdcx/sing-box-yes/main/install-v3.sh)
 ```    
 执行后会自行显示管理菜单，通过菜单选项`1`将会自动安装最新release版本。与此同时，你也可以通过`sing-box install`来安装最新版本    
 
