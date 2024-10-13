@@ -1,5 +1,5 @@
 # sing-box-yes  
-sing-box manager
+A simple sing-box manager
 
 sing-box is a universal proxy platform which supports multiple protocols.
 Please check [official site](https://sing-box.sagernet.org/) for more details.
@@ -44,8 +44,3 @@ sing-box-v0.0.1 管理脚本
 [INF] 配置文件路径:/usr/local/etc/sing-box/config.json 
 [INF] 可执行文件路径:/usr/local/bin/sing-box 
 ```   
-# examples  
-- client_config.json will be used as client config,inbound:`tun`,outbound:`shadowsocks`  
-- server_config.json will be used as server config,inbound:`shadowcoks`,outbound:`direct`  
-
-
