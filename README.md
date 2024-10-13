@@ -9,10 +9,10 @@ bash <(curl -Ls https://raw.githubusercontent.com/zswdcx/sing-box-yes/master/ins
 ```    
 To install a specific version, use flag `install`:
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/sing-box-yes/master/install-pre.sh) install 1.9.7
+bash <(curl -Ls https://raw.githubusercontent.com/zswdcx/sing-box-yes/master/install-pre.sh) install 1.9.7
 ```
 # Quick Start
-Type `sing-box` to enter control menu, u.i.:
+Type `sing-box` for the control menu, u.i.:
 ```
 sing-box-v0.0.1 管理脚本
   0. 退出脚本
