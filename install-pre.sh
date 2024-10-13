@@ -27,7 +27,7 @@ OS_ARCH=''
 SING_BOX_VERSION=''
 
 #script version
-SING_BOX_YES_VERSION='0.0.2'
+SING_BOX_YES_VERSION='0.0.4'
 
 #package download path
 DOWNLAOD_PATH='/usr/local/sing-box'
@@ -273,7 +273,7 @@ download_sing-box() {
         SING_BOX_VERSION=$1
         local SING_BOX_VERSION_TEMP="v${SING_BOX_VERSION}"
     else
-        local SING_BOX_VERSION_TEMP=$(curl -Ls "https://api.github.com/repos/SagerNet/sing-box/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        local SING_BOX_VERSION_TEMP=$(curl -Ls "https://api.github.com/repos/SagerNet/sing-box/releases" | jq -r 'map(select(.prerelease)) | first | .tag_name' |  sed -E 's/.*"([^"]+)".*/\1/')
         SING_BOX_VERSION=${SING_BOX_VERSION_TEMP:1}
     fi
     LOGI "将选择使用版本:${SING_BOX_VERSION}"
